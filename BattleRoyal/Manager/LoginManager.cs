@@ -8,17 +8,12 @@ using GrandTheftMultiplayer.Shared.Math;
 
 namespace BattleRoyal.Manager
 {
-    class SpawnManager : Script
+    class LoginManager : Script
     {
-        public SpawnManager()
+        public LoginManager()
         {
-            API.onPlayerFinishedDownload += OnPlayerFinishedDownloadHandler;
             API.onPlayerConnected += OnPlayerConnectedHandler;
             API.onPlayerDisconnected += OnPlayerDisconnectedHandler;
-        }
-        public void OnPlayerFinishedDownloadHandler(Client player)
-        {
-            
         }
         public void OnPlayerConnectedHandler(Client player)
         {
