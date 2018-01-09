@@ -103,6 +103,7 @@
     <Compile Include="Global\Commads.cs" />
     <Compile Include="Global\DeathHandler.cs" />
     <Compile Include="Main.cs" />
+    <Content Include="Manager\Client\MenuManager.ts" />
     <Compile Include="Manager\SpawnManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -118,6 +119,7 @@
     <Content Include="docs\MySqlParameter.xml" />
     <Content Include="docs\MySqlParameterCollection.xml" />
     <Content Include="docs\MySqlTransaction.xml" />
+    <Content Include="Manager\Client\SkinManager.ts" />
     <Content Include="meta.xml">
       <SubType>Designer</SubType>
     </Content>
