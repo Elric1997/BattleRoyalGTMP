@@ -1,0 +1,16 @@
+﻿<meta>
+	<info name="BattleRoyal" async="true"/>
+	
+	<script src="/Database/InitDatabase.cs" type="server" lang="csharp" />
+	<script src="/Database/NewPlayerDB.cs" type="server" lang="csharp" />
+
+	<script src="/Global/Commads.cs" type="server" lang="csharp" />
+	<script src="/Global/DeathHandler.cs" type="server" lang="csharp" />
+
+	<script src="Main.cs" type="server" lang="csharp" />
+	
+	<script src="Manager/SpawnManager.cs" type="server" lang="csharp" />
+
+	<assembly ref="System.Data.dll"/>
+	<assembly ref="MySql.Data.dll"/>
+</meta>

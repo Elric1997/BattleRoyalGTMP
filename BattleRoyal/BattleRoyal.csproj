@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3792958A-C001-4A32-9FA9-27E3B13D460D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BattleRoyal</RootNamespace>
+    <AssemblyName>BattleRoyal</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BCrypt.Net, Version=0.1.4141.31969, Culture=neutral, PublicKeyToken=f3bc8f8c31beeb49, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net.0.1.0\lib\net35\BCrypt.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="GrandTheftMultiplayer.Server, Version=0.1.640.64, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\grandtheftmultiplayer.api.0.1.640.64\lib\net452\GrandTheftMultiplayer.Server.exe</HintPath>
+    </Reference>
+    <Reference Include="GrandTheftMultiplayer.Shared, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\grandtheftmultiplayer.api.0.1.640.64\lib\net452\GrandTheftMultiplayer.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Insight.Database, Version=6.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Insight.Database.6.1.1\lib\net451\Insight.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Insight.Database.Configuration, Version=6.1.1.0, Culture=neutral, PublicKeyToken=f35c6ef87e515afc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Insight.Database.Configuration.6.1.1\lib\net451\Insight.Database.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Insight.Database.Core, Version=6.1.1.0, Culture=neutral, PublicKeyToken=f35c6ef87e515afc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Insight.Database.Core.6.1.1\lib\net451\Insight.Database.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Insight.Database.Providers.Default, Version=6.1.1.0, Culture=neutral, PublicKeyToken=f35c6ef87e515afc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Insight.Database.Providers.Default.6.1.1\lib\net451\Insight.Database.Providers.Default.dll</HintPath>
+    </Reference>
+    <Reference Include="Insight.Database.Providers.MySQL, Version=6.1.1.0, Culture=neutral, PublicKeyToken=f35c6ef87e515afc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Insight.Database.Providers.MySQL.6.1.1\lib\net451\Insight.Database.Providers.MySQL.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.10.5\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.10.5\lib\net452\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.4.12\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.Common.4.1.0\lib\net451\System.Data.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlClient, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.1.0\lib\net46\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database\InitDatabase.cs" />
+    <Compile Include="Database\NewPlayerDB.cs" />
+    <Compile Include="Global\Commads.cs" />
+    <Compile Include="Global\DeathHandler.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Manager\SpawnManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="docs\MySqlCommand.xml" />
+    <Content Include="docs\MySqlCommandBuilder.xml" />
+    <Content Include="docs\MySqlConnection.xml" />
+    <Content Include="docs\MySqlConnectionStringBuilder.xml" />
+    <Content Include="docs\MySqlDataAdapter.xml" />
+    <Content Include="docs\MySqlDataReader.xml" />
+    <Content Include="docs\MySqlException.xml" />
+    <Content Include="docs\MySqlHelper.xml" />
+    <Content Include="docs\MySqlParameter.xml" />
+    <Content Include="docs\MySqlParameterCollection.xml" />
+    <Content Include="docs\MySqlTransaction.xml" />
+    <Content Include="meta.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="types-gt-mp\Declarations.d.ts" />
+    <Content Include="types-gt-mp\Definitions\Declarations.d.ts" />
+    <Content Include="types-gt-mp\Definitions\GrandTheftMultiplayer.Client.Contracts.d.ts" />
+    <Content Include="types-gt-mp\Definitions\GrandTheftMultiplayer.Client.GUI.d.ts" />
+    <Content Include="types-gt-mp\Definitions\GrandTheftMultiplayer.Client.Javascript.d.ts" />
+    <Content Include="types-gt-mp\Definitions\GrandTheftMultiplayer.Client.Javascript.ScriptContext.d.ts" />
+    <Content Include="types-gt-mp\Definitions\GrandTheftMultiplayer.Client.Models.d.ts" />
+    <Content Include="types-gt-mp\Definitions\GrandTheftMultiplayer.Client.Sound.d.ts" />
+    <Content Include="types-gt-mp\Definitions\GrandTheftMultiplayer.Client.Sync.d.ts" />
+    <Content Include="types-gt-mp\Definitions\GrandTheftMultiplayer.Shared.d.ts" />
+    <Content Include="types-gt-mp\Definitions\GrandTheftMultiplayer.Shared.Math.d.ts" />
+    <Content Include="types-gt-mp\Definitions\GTA.d.ts" />
+    <Content Include="types-gt-mp\Definitions\GTA.Math.d.ts" />
+    <Content Include="types-gt-mp\Definitions\GTA.Native.d.ts" />
+    <Content Include="types-gt-mp\Definitions\GTA.NaturalMotion.d.ts" />
+    <Content Include="types-gt-mp\Definitions\GTA.UI.d.ts" />
+    <Content Include="types-gt-mp\Definitions\index.d.ts" />
+    <Content Include="types-gt-mp\Definitions\Microsoft.ClearScript.d.ts" />
+    <Content Include="types-gt-mp\Definitions\NativeUI.d.ts" />
+    <Content Include="types-gt-mp\Definitions\NativeUI.UIMenu.d.ts" />
+    <Content Include="types-gt-mp\Definitions\NativeUI.UIMenuDynamicListItem.d.ts" />
+    <Content Include="types-gt-mp\Definitions\NativeUI.UIMenuItem.d.ts" />
+    <Content Include="types-gt-mp\Definitions\NativeUI.UIResText.d.ts" />
+    <Content Include="types-gt-mp\Definitions\System.Collections.d.ts" />
+    <Content Include="types-gt-mp\Definitions\System.Collections.Generic.d.ts" />
+    <Content Include="types-gt-mp\Definitions\System.d.ts" />
+    <Content Include="types-gt-mp\Definitions\System.Drawing.d.ts" />
+    <Content Include="types-gt-mp\Definitions\System.Windows.Forms.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
