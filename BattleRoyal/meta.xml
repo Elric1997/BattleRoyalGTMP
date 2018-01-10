@@ -10,6 +10,7 @@
 	<script src="Main.cs" type="server" lang="csharp" />
 	
 	<script src="Manager/SpawnManager.cs" type="server" lang="csharp" />
+  <script src="Manager/LoginManager.cs" type="server" lang="csharp" />
 
 	<script src="Manager/Client/MenuManager.ts" type="client" lang="javascript" />
 	<script src="Manager/Client/SkinManager.ts" type="client" lang="javascript" />
