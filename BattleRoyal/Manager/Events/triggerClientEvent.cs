@@ -11,7 +11,7 @@ namespace BattleRoyal.Manager.Events
     {
         public triggerClientEvent()
         {
-
+            
         }
     }
 }
