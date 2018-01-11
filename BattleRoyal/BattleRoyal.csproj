@@ -104,6 +104,8 @@
     <Compile Include="Global\DeathHandler.cs" />
     <Compile Include="Main.cs" />
     <Content Include="Manager\Client\MenuManager.ts" />
+    <Compile Include="Manager\Events\onClientEventTrigger.cs" />
+    <Compile Include="Manager\Events\triggerClientEvent.cs" />
     <Compile Include="Manager\SpawnManager.cs" />
     <Compile Include="Manager\LoginManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
