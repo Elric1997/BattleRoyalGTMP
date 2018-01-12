@@ -10,6 +10,7 @@ namespace BattleRoyal.Manager.Vehicle
 {
     class VehicleSpawner : Script
     {
+        GmBattleRoyal GmBattleRoyal = new GmBattleRoyal();
         public VehicleSpawner()
         {
             API.onResourceStart += onResStart;
@@ -82,7 +83,7 @@ namespace BattleRoyal.Manager.Vehicle
                 API.setEntityData(respawnCar, "SPAWN_DIM", dimension);
 
             }
-            if (API.getEntityData(car, "BATTLE_CAR") == true && !BattleRoyal.IsGameRunning)
+            if (API.getEntityData(car, "BATTLE_CAR") == true && !GmBattleRoyal.IsGameRunning)
             {
                 API.consoleOutput("False");
 

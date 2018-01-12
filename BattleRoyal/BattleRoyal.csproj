@@ -100,6 +100,7 @@
   <ItemGroup>
     <Compile Include="Database\InitDatabase.cs" />
     <Compile Include="Database\NewPlayerDB.cs" />
+    <Compile Include="Gamemodes\BattleRoyal\GmBattleRoyal.cs" />
     <Compile Include="Global\Commads.cs" />
     <Compile Include="Global\DeathHandler.cs" />
     <Compile Include="Main.cs" />
@@ -160,5 +161,6 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
