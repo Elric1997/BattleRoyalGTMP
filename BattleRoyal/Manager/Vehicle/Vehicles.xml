@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<vehicles>
+	<rome_vehicle model='970385471' posX='-1283.351' posY='-3388.943' posZ='14.47914' heading='-47.10204' dim='-1'/>//
+	<rome_vehicle model='970385471' posX='-1260.537' posY='-3400.671' posZ='14.479' heading='-7.44796' dim='-1'/>//
+	<rome_vehicle model='1093792632' posX='-1200.678' posY='-3377.905' posZ='13.53072' heading='-30.10148' dim='-1'/>//
+	<rome_vehicle model='1093792632' posX='-1198.34' posY='-3365.471' posZ='13.53126' heading='103.1107' dim='-1'/>//
+	<rome_vehicle model='1987142870' posX='-1203.084' posY='-3362.533' posZ='13.52189' heading='105.5649' dim='-1'/>//
+	<rome_vehicle model='2123327359' posX='-1207.87' posY='-3359.679' posZ='13.22407' heading='105.1238' dim='-1'/>//
+	<rome_vehicle model='1102544804' posX='-1213.119' posY='-3356.864' posZ='13.46083' heading='107.2777' dim='-1'/>//
+	<rome_vehicle model='-1779120616' posX='-1217.991' posY='-3354.102' posZ='13.49058' heading='106.4875' dim='-1'/>//
+	<rome_vehicle model='-1779120616' posX='-1222.916' posY='-3351.117' posZ='13.49101' heading='108.0458' dim='-1'/>//
+	<rome_vehicle model='-1126264336' posX='-1228.295' posY='-3347.999' posZ='13.63788' heading='105.19' dim='-1'/>//
+
+	//Battle Royal Cards
+
+	<battle_vehicle model='741586030' posX='1835.364' posY='2542.078' posZ='45.50252' heading='-89.40088' dim='-3'/>//
+	<battle_vehicle model='-89291282' posX='1717.089' posY='3322.619' posZ='40.90248' heading='-164.8415' dim='-3'/>//
+	<battle_vehicle model='2035069708' posX='1363.694' posY='3650.754' posZ='33.31696' heading='-115.8247' dim='-3'/>//
+	<battle_vehicle model='1753414259' posX='958.7372' posY='3615.692' posZ='32.25792' heading='35.38231' dim='-3'/>//
+</vehicles>

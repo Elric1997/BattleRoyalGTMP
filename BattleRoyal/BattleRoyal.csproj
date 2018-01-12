@@ -105,9 +105,9 @@
     <Compile Include="Main.cs" />
     <Content Include="Manager\Client\MenuManager.ts" />
     <Compile Include="Manager\Events\onClientEventTrigger.cs" />
-    <Compile Include="Manager\Events\triggerClientEvent.cs" />
     <Compile Include="Manager\SpawnManager.cs" />
     <Compile Include="Manager\LoginManager.cs" />
+    <Compile Include="Manager\Vehicle\VehicleSpawner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -123,6 +123,7 @@
     <Content Include="docs\MySqlParameterCollection.xml" />
     <Content Include="docs\MySqlTransaction.xml" />
     <Content Include="Manager\Client\SkinManager.ts" />
+    <Content Include="Manager\Vehicle\Vehicles.xml" />
     <Content Include="meta.xml">
       <SubType>Designer</SubType>
     </Content>
