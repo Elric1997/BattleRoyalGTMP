@@ -26,12 +26,19 @@ namespace BattleRoyal.Manager
         {
             conection--;
 
-            Vector3 RotationsPositon = new Vector3(0, 0, 0);
-            Vector3 SpawnPos = new Vector3(0, 0, 0); // Hier die SpawnPos
+            Vector3 RotationsPositon = new Vector3(0, 0, 90);
+            Vector3 SpawnPos = new Vector3(-551.7838, 284.1952, 82.97662);
 
             API.setEntityPosition(Player, SpawnPos);
             API.setEntityRotation(Player, RotationsPositon);
-            API.setEntityDimension(Player, conection);
+
+            var ourDim = DimensionManager.RequestPrivateDimension(Player);
+
+            API.freezePlayer(Player, true);
+
+            API.setEntityDimension(Player, ourDim);
+
+            API.triggerClientEvent(Player, "SpawnCam");
         }
     }
 }

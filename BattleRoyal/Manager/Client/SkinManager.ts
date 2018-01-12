@@ -2,12 +2,48 @@
 var currentSkinIndex = 0;
 
 var skins = [
-    1581098148, // CopMale
-    368603149, // CopFemale
-    -459818001,
-    712602007,
-    1161072059,
-    1309468115
-
+    1813637474,
+	-840346158,
+	1596003233,
+	1641334641,
+	-407694286,
+	-927261102,
+	1530648845,
+	 808859815,
+	-52268862
 ];
 
+API.onKeyDown.connect(function(sender, args) {
+    if (!selectingSkin) return;
+
+    if (args.KeyCode == Keys.Left) {
+        if (currentSkinIndex == 0){
+			currentSkinIndex = skins.length - 1;
+		}
+        else 
+		{
+		currentSkinIndex = (currentSkinIndex - 1) % skins.length;
+		}
+        API.setPlayerSkin(skins[currentSkinIndex]);
+    }
+    else if (args.KeyCode == Keys.Right) 
+	{
+        currentSkinIndex = (currentSkinIndex + 1) % skins.length;
+
+        API.setPlayerSkin(skins[currentSkinIndex]);
+    }
+    else if (args.KeyCode == Keys.Enter) 
+	{
+        selectingSkin = false;
+		API.setPlayerSkin(skins[currentSkinIndex]);
+		resource.MenuManager.SpawnMenu();
+    }
+});  
+
+function ChanceSkinBool(){
+	if(selectingSkin){
+		selectingSkin = false
+	} else {
+		selectingSkin = true
+	}
+}

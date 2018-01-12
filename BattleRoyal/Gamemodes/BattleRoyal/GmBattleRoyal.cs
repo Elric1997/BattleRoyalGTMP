@@ -13,14 +13,8 @@ public class GmBattleRoyal : Script
 
     public bool IsGameRunning
     {
-        get
-        {
-            return _IsGameRunning;
-        }
-        set
-        {
-            _IsGameRunning = value;
-        }
+        get { return _IsGameRunning; }
+        set { _IsGameRunning = value; }
     }
 
     public GmBattleRoyal()

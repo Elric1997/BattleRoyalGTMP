@@ -22,12 +22,19 @@ function SpawnMenu(){
         API.setActiveCamera(null);
         API.showCursor(false);
         mainmenu.Visible = false;
+		API.triggerServerEvent("JoinBattleRoyal");
     });
+
+	item2.Activated.connect(function(menu, item) {
+		resource.SkinManager.ChanceSkinBool();
+		mainmenu.Visible = false;
+	});
 
     item3.Activated.connect(function(menu, item) {
         API.setActiveCamera(null);
         API.showCursor(false);
         mainmenu.Visible = false;
+		API.triggerServerEvent("JoinFreerome");
     });
 
     item4.Activated.connect(function(menu, item) {
@@ -58,12 +65,14 @@ function MainMenu(){
         API.setActiveCamera(null);
         API.showCursor(false);
         mainmenu.Visible = false;
+		API.triggerServerEvent("JoinBattleRoyal");
     });
 
     item3.Activated.connect(function(menu, item) {
         API.setActiveCamera(null);
         API.showCursor(false);
         mainmenu.Visible = false;
+		API.triggerServerEvent("JoinFreerome");
     });
 
     item4.Activated.connect(function(menu, item) {

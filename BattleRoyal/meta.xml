@@ -8,9 +8,13 @@
 	<script src="/Global/DeathHandler.cs" type="server" lang="csharp" />
 
 	<script src="Main.cs" type="server" lang="csharp" />
+
+	<script src="Gamemodes/BattleRoyal/GmBattleRoyal.cs" type="server" lang="csharp" />
 	
 	<script src="Manager/SpawnManager.cs" type="server" lang="csharp" />
 	<script src="Manager/LoginManager.cs" type="server" lang="csharp" />
+
+	<script src="Manager/DimensionManager.cs" type="server" lang="csharp" />
 
 	<script src="Manager/Events/onClientEventTrigger.cs" type="server" lang="csharp" />
 	
@@ -19,6 +23,8 @@
 
 	<script src="Manager/Client/MenuManager.ts" type="client" lang="javascript" />
 	<script src="Manager/Client/SkinManager.ts" type="client" lang="javascript" />
+	
+	<script src="Manager/Events/onServerEventTrigger.ts" type="client" lang="javascript" />
 
 	<assembly ref="System.Data.dll"/>
 	<assembly ref="MySql.Data.dll"/>

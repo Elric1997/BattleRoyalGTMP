@@ -101,33 +101,17 @@
     <Compile Include="Database\InitDatabase.cs" />
     <Compile Include="Database\NewPlayerDB.cs" />
     <Compile Include="Gamemodes\BattleRoyal\GmBattleRoyal.cs" />
+    <Compile Include="Gamemodes\Freerome\GmFreerome.cs" />
     <Compile Include="Global\Commads.cs" />
     <Compile Include="Global\DeathHandler.cs" />
     <Compile Include="Main.cs" />
     <Content Include="Manager\Client\MenuManager.ts" />
+    <Compile Include="Manager\DimensionManager.cs" />
     <Compile Include="Manager\Events\onClientEventTrigger.cs" />
     <Compile Include="Manager\SpawnManager.cs" />
     <Compile Include="Manager\LoginManager.cs" />
     <Compile Include="Manager\Vehicle\VehicleSpawner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="docs\MySqlCommand.xml" />
-    <Content Include="docs\MySqlCommandBuilder.xml" />
-    <Content Include="docs\MySqlConnection.xml" />
-    <Content Include="docs\MySqlConnectionStringBuilder.xml" />
-    <Content Include="docs\MySqlDataAdapter.xml" />
-    <Content Include="docs\MySqlDataReader.xml" />
-    <Content Include="docs\MySqlException.xml" />
-    <Content Include="docs\MySqlHelper.xml" />
-    <Content Include="docs\MySqlParameter.xml" />
-    <Content Include="docs\MySqlParameterCollection.xml" />
-    <Content Include="docs\MySqlTransaction.xml" />
-    <Content Include="Manager\Client\SkinManager.ts" />
-    <Content Include="Manager\Vehicle\Vehicles.xml" />
-    <Content Include="meta.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="types-gt-mp\Declarations.d.ts" />
     <Content Include="types-gt-mp\Definitions\Declarations.d.ts" />
     <Content Include="types-gt-mp\Definitions\GrandTheftMultiplayer.Client.Contracts.d.ts" />
@@ -156,6 +140,25 @@
     <Content Include="types-gt-mp\Definitions\System.d.ts" />
     <Content Include="types-gt-mp\Definitions\System.Drawing.d.ts" />
     <Content Include="types-gt-mp\Definitions\System.Windows.Forms.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="docs\MySqlCommand.xml" />
+    <Content Include="docs\MySqlCommandBuilder.xml" />
+    <Content Include="docs\MySqlConnection.xml" />
+    <Content Include="docs\MySqlConnectionStringBuilder.xml" />
+    <Content Include="docs\MySqlDataAdapter.xml" />
+    <Content Include="docs\MySqlDataReader.xml" />
+    <Content Include="docs\MySqlException.xml" />
+    <Content Include="docs\MySqlHelper.xml" />
+    <Content Include="docs\MySqlParameter.xml" />
+    <Content Include="docs\MySqlParameterCollection.xml" />
+    <Content Include="docs\MySqlTransaction.xml" />
+    <Content Include="Manager\Client\SkinManager.ts" />
+    <Content Include="Manager\Events\onServerEventTrigger.ts" />
+    <Content Include="Manager\Vehicle\Vehicles.xml" />
+    <Content Include="meta.xml">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
