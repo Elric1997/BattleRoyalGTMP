@@ -3,6 +3,8 @@
 	
 	<script src="/Database/InitDatabase.cs" type="server" lang="csharp" />
 	<script src="/Database/NewPlayerDB.cs" type="server" lang="csharp" />
+	<script src="/Database/LoadPlayerDB.cs" type="server" lang="csharp" />
+	<script src="/Database/UpdatePlayerDB.cs" type="server" lang="csharp" />
 
 	<script src="/Global/Commads.cs" type="server" lang="csharp" />
 	<script src="/Global/DeathHandler.cs" type="server" lang="csharp" />

@@ -43,6 +43,7 @@ API.onKeyDown.connect(function(sender, args) {
         selectingSkin = false;
 		API.setPlayerSkin(skins[currentSkinIndex]);
 		resource.MenuManager.SpawnMenu();
+		API.triggerServerEvent("UpDateSkinDB", skins[currentSkinIndex]);
     }
 });  
 

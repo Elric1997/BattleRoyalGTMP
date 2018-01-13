@@ -99,7 +99,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database\InitDatabase.cs" />
+    <Compile Include="Database\LoadPlayerDB.cs" />
     <Compile Include="Database\NewPlayerDB.cs" />
+    <Compile Include="Database\UpdatePlayerDB.cs" />
     <Compile Include="Gamemodes\BattleRoyal\GmBattleRoyal.cs" />
     <Compile Include="Gamemodes\Freerome\GmFreerome.cs" />
     <Compile Include="Global\Commads.cs" />

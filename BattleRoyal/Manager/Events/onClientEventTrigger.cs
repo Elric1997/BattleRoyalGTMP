@@ -42,6 +42,12 @@ namespace BattleRoyal.Manager.Events
                     API.sendChatMessageToPlayer(player, player.name + " you are now in the freerome area!");
                     API.setEntityDimension(player, -1);
                     break;
+                case "UpDateSkinDB":
+                    UpdatePlayerDB updatePlayerDB = new UpdatePlayerDB();
+                    int NewSkinID = Convert.ToInt32(arguments[0]);
+                    updatePlayerDB.SkinID = NewSkinID;
+                    updatePlayerDB.UpdateSkin(player);
+                    break;
             }
         }
     }

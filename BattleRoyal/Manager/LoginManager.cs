@@ -15,11 +15,11 @@ namespace BattleRoyal.Manager
             API.onPlayerConnected += OnPlayerConnectedHandler;
             API.onPlayerDisconnected += OnPlayerDisconnectedHandler;
         }
-        public void OnPlayerConnectedHandler(Client player)
+        private void OnPlayerConnectedHandler(Client player)
         {
             API.sendNotificationToAll("~g~" + player.name + "~#ffffff~ has joined the Server.");
         }
-        public void OnPlayerDisconnectedHandler(Client player, string reason)
+        private void OnPlayerDisconnectedHandler(Client player, string reason)
         {
             API.sendNotificationToAll("~r~" + player.name + "~#ffffff~ has left the Server. Reason: " + reason);
         }
