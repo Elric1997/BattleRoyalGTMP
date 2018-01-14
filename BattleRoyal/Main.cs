@@ -16,11 +16,12 @@ namespace Main
         }
         public void StartUpHandler()
         {
+
             API.consoleOutput("*----------------------------------*");
             API.consoleOutput("*   Starting Battle Royal modus	  *");
             API.consoleOutput("*         Developt by Elric	      *");
-            API.consoleOutput("*           Version 0.0.9	      *");
-            API.consoleOutput("*----------------------------------*");
+            API.consoleOutput("*           Version 0.1.8.5        *");
+            API.consoleOutput("*----------------------------------*"); 
         }
     }
 }

@@ -107,6 +107,9 @@
     <Compile Include="Global\Commads.cs" />
     <Compile Include="Global\DeathHandler.cs" />
     <Compile Include="Main.cs" />
+    <Content Include="GUI\resources\Stats.css" />
+    <Content Include="GUI\resources\Stats.html" />
+    <Content Include="GUI\Stats.ts" />
     <Content Include="Manager\Client\MenuManager.ts" />
     <Compile Include="Manager\DimensionManager.cs" />
     <Compile Include="Manager\Events\onClientEventTrigger.cs" />

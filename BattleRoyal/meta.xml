@@ -27,6 +27,12 @@
 	<script src="Manager/Client/SkinManager.ts" type="client" lang="javascript" />
 	
 	<script src="Manager/Events/onServerEventTrigger.ts" type="client" lang="javascript" />
+	     
+	<file src="GUI/resources/Stats.css" />    
+	<file src="GUI/resources/Stats.html" />   
+
+
+    <script src="GUI/Stats.ts" type="client" lang="javascript" />
 
 	<assembly ref="System.Data.dll"/>
 	<assembly ref="MySql.Data.dll"/>
