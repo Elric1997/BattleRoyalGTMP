@@ -25,13 +25,30 @@ class UpdatePlayerDB : Script
     {
         if (initdb.OpenConnection() == true)
         {
-            string szQuery = "UPDATE player SET skin='" + SkinID + "' WHERE socialclubname='" + player.socialClubName + "'";
+            string szQuery = "SELECT socialclubname from player WHERE socialclubname='" + player.socialClubName + "'";
 
             MySqlCommand sqlcmd = new MySqlCommand(szQuery, initdb.connDB);
             MySqlDataReader sqlred = sqlcmd.ExecuteReader();
 
-            
+            if (!sqlred.Read())
+            {
+                API.sendChatMessageToPlayer(player, "Dein Skin konnte nicht gespeichert werden!");
+            }
+            else
+            {
+                sqlred.Close();
 
+                szQuery = "UPDATE player SET skin='" + SkinID + "' WHERE socialclubname='" + player.socialClubName + "'";
+
+                sqlcmd = new MySqlCommand(szQuery, initdb.connDB);
+                sqlred = sqlcmd.ExecuteReader();
+
+                API.sendChatMessageToPlayer(player, player.socialClubName + " dein Skin wurde geändert und gespeichert");
+
+                sqlred.Close();
+
+                initdb.CloseConnection();
+            }
             sqlred.Close();
 
             initdb.CloseConnection();

@@ -17,7 +17,6 @@ function SpawnMenu(){
     let item3 = API.createMenuItem("Freerome", "");
     let item4 = API.createMenuItem("Exit", "");
 
-    // This is how you handle menu item selection
     item1.Activated.connect(function(menu, item) {
         API.setActiveCamera(null);
         API.showCursor(false);

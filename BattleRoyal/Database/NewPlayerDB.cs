@@ -32,10 +32,11 @@ namespace BattleRoyal.Database
 
                 if (!sqlred.Read())
                 {
-                    sqlred.Close();
-                    szQuery = "INSERT INTO player (socialclubname) VALUES('" + player.socialClubName + "'" + ")";
-                    sqlcmd = new MySqlCommand(szQuery, initdb.connDB);
-                    sqlcmd.ExecuteReader();
+                    API.sendChatMessageToPlayer(player, "Schade " + player.socialClubName + " registriere dich doch einfach auf unsererer Webseite! Dann werden deine Daten auch gespeichert!");
+                }
+                else
+                {
+                    API.sendChatMessageToPlayer(player, player.socialClubName + " schön dich wiederzusehen! Du wurdest eingeloggt!");
                 }
                 sqlred.Close();
 
