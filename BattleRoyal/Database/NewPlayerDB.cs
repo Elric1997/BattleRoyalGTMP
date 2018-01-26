@@ -12,6 +12,7 @@ namespace BattleRoyal.Database
     {
         InitDatabase initdb = new InitDatabase();
         LoadPlayerDB loadPlayerDB = new LoadPlayerDB();
+        UpdatePlayerDB UpdatePlayerDB = new UpdatePlayerDB();
 
         public NewPlayerDB()
         {
@@ -23,25 +24,7 @@ namespace BattleRoyal.Database
         }  
         private void JoinNewUserDB(Client player)
         {
-            if (initdb.OpenConnection() == true)
-            {
-                string szQuery = "SELECT socialclubname from player WHERE socialclubname='" + player.socialClubName + "'";
-
-                MySqlCommand sqlcmd = new MySqlCommand(szQuery, initdb.connDB);
-                MySqlDataReader sqlred = sqlcmd.ExecuteReader();
-
-                if (!sqlred.Read())
-                {
-                    API.sendChatMessageToPlayer(player, "Schade " + player.socialClubName + " registriere dich doch einfach auf unsererer Webseite! Dann werden deine Daten auch gespeichert!");
-                }
-                else
-                {
-                    API.sendChatMessageToPlayer(player, player.socialClubName + " schön dich wiederzusehen! Du wurdest eingeloggt!");
-                }
-                sqlred.Close();
-
-                initdb.CloseConnection();
-            }
+           
         }
     }
 }

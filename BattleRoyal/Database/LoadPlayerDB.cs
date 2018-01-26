@@ -10,6 +10,7 @@ using GrandTheftMultiplayer.Shared.Math;
 class LoadPlayerDB : Script
 {
     InitDatabase initdb = new InitDatabase();
+    UpdatePlayerDB UpdatePlayerDB = new UpdatePlayerDB();
 
     public LoadPlayerDB()
     {
@@ -24,21 +25,36 @@ class LoadPlayerDB : Script
     {
         if (initdb.OpenConnection() == true)
         {
-            string szQuery = "SELECT skin from player WHERE socialclubname='" + player.socialClubName + "'";
+            string szQuery = "SELECT socialclubname from player WHERE socialclubname='" + player.socialClubName + "'";
 
             MySqlCommand sqlcmd = new MySqlCommand(szQuery, initdb.connDB);
             MySqlDataReader sqlred = sqlcmd.ExecuteReader();
 
-            while (sqlred.Read())
+            if (sqlred.Read())
             {
-                string skin = sqlred.GetString("skin");
-                int skinid = 0;
-                skinid = Int32.Parse(skin);
+                API.sendChatMessageToPlayer(player, player.socialClubName + " deine Daten wurden geladen!");
+                sqlred.Close();
 
-                API.triggerClientEvent(player, "DBSkin", skinid);
+                szQuery = "SELECT skin from player WHERE socialclubname='" + player.socialClubName + "'";
+
+                sqlcmd = new MySqlCommand(szQuery, initdb.connDB);
+                sqlred = sqlcmd.ExecuteReader();
+
+                while (sqlred.Read())
+                {
+                    string skin = sqlred.GetString("skin");
+                    int skinid = 0;
+                    skinid = Int32.Parse(skin);
+
+                    API.triggerClientEvent(player, "DBSkin", skinid);
+                }
+                sqlred.Close();
             }
-            sqlred.Close();
-
+            else
+            {
+                sqlred.Close();
+                API.sendChatMessageToPlayer(player, player.socialClubName + " Dein Name existiert noch nicht! Bitte Registriere dich!");
+            }
             initdb.CloseConnection();
         }
     }

@@ -1,23 +1,27 @@
 ﻿<meta>
 	<info name="BattleRoyal" async="true"/>
 	
-	<script src="/Database/InitDatabase.cs" type="server" lang="csharp" />
-	<script src="/Database/NewPlayerDB.cs" type="server" lang="csharp" />
-	<script src="/Database/LoadPlayerDB.cs" type="server" lang="csharp" />
-	<script src="/Database/UpdatePlayerDB.cs" type="server" lang="csharp" />
+	<script src="Database/InitDatabase.cs" type="server" lang="csharp" />
+	<script src="Database/NewPlayerDB.cs" type="server" lang="csharp" />
+	<script src="Database/LoadPlayerDB.cs" type="server" lang="csharp" />
+	<script src="Database/UpdatePlayerDB.cs" type="server" lang="csharp" />
 
-	<script src="/Global/Commads.cs" type="server" lang="csharp" />
-	<script src="/Global/DeathHandler.cs" type="server" lang="csharp" />
+	<script src="Global/Commads.cs" type="server" lang="csharp" />
 
 	<script src="Main.cs" type="server" lang="csharp" />
 
 	<script src="Gamemodes/BattleRoyal/GmBattleRoyal.cs" type="server" lang="csharp" />
+	<script src="Gamemodes/Freerome/GmFreerome.cs" type="server" lang="csharp" />
+	<script src="Gamemodes/Lobby/GmLobby.cs" type="server" lang="csharp" />
 	
 	<script src="Manager/SpawnManager.cs" type="server" lang="csharp" />
 	<script src="Manager/LoginManager.cs" type="server" lang="csharp" />
-
 	<script src="Manager/DimensionManager.cs" type="server" lang="csharp" />
-
+	<script src="Manager/UpdateManager.cs" type="server" lang="csharp" />
+	<script src="Manager/DeathManager.cs" type="server" lang="csharp" />
+	
+	<script src="Manager/Weapon/WeaponSpawnArea.cs" type="server" lang="csharp" />
+	
 	<script src="Manager/Events/onClientEventTrigger.cs" type="server" lang="csharp" />
 	
 	<script src="Manager/Vehicle/VehicleSpawner.cs" type="server" lang="csharp" />
@@ -25,12 +29,12 @@
 
 	<script src="Manager/Client/MenuManager.ts" type="client" lang="javascript" />
 	<script src="Manager/Client/SkinManager.ts" type="client" lang="javascript" />
+	<script src="Manager/Client/PickupManager.ts" type="client" lang="javascript" />
 	
 	<script src="Manager/Events/onServerEventTrigger.ts" type="client" lang="javascript" />
 	     
 	<file src="GUI/resources/Stats.css" />    
 	<file src="GUI/resources/Stats.html" />   
-
 
     <script src="GUI/Stats.ts" type="client" lang="javascript" />
 

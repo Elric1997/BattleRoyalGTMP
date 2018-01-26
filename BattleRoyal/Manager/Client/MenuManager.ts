@@ -1,4 +1,6 @@
-﻿API.onKeyDown.connect(function(Player, args) {
+﻿/// <reference path="types-gt-mp/Declarations.d.ts" />
+
+API.onKeyDown.connect(function (Player, args) {
     if (args.KeyCode == Keys.M && !API.isChatOpen())
     {
 		MainMenu();            

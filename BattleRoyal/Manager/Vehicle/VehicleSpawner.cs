@@ -27,17 +27,15 @@ namespace BattleRoyal.Manager.Vehicle
                     element.getElementData<float>("posZ"));
                 var heading = element.getElementData<float>("heading");
 
-                var dimension = element.getElementData<int>("dim");
 
                 var car = API.createVehicle(hash,
                     spawnPos,
-                    new Vector3(0, 0, heading), 160, 160, dimension);
+                    new Vector3(0, 0, heading), 160, 160, 0);
 
                 API.setEntityData(car, "RESPAWNABLE", true);
 
                 API.setEntityData(car, "SPAWN_POS", spawnPos);
                 API.setEntityData(car, "SPAWN_ROT", heading);
-                API.setEntityData(car, "SPAWN_DIM", dimension);
             }
             foreach (var element in cars.getElementsByType("battle_vehicle"))
             {
@@ -47,64 +45,16 @@ namespace BattleRoyal.Manager.Vehicle
                     element.getElementData<float>("posZ"));
                 var heading = element.getElementData<float>("heading");
 
-                var dimension = element.getElementData<int>("dim");
 
                 var car = API.createVehicle(hash,
                     spawnPos,
-                    new Vector3(0, 0, heading), 160, 160, dimension);
+                    new Vector3(0, 0, heading), 160, 160, 0);
 
                 API.setEntityData(car, "BATTLE_CAR", true);
 
                 API.setEntityData(car, "SPAWN_POS", spawnPos);
                 API.setEntityData(car, "SPAWN_ROT", heading);
-                API.setEntityData(car, "SPAWN_DIM", dimension);
             }
-        }
-        public void OnVehicleDeathHandler(NetHandle car)
-        {
-            if (API.getEntityData(car, "RESPAWNABLE") == true)
-            {
-
-                var color1 = API.getVehiclePrimaryColor(car);
-                var color2 = API.getVehicleSecondaryColor(car);
-                var model = API.getEntityModel(car);
-
-                var spawnPos = API.getEntityData(car, "SPAWN_POS");
-                var heading = API.getEntityData(car, "SPAWN_ROT");
-                var dimension = API.getEntityData(car, "SPAWN_DIM");
-
-                API.deleteEntity(car);
-
-                var respawnCar = API.createVehicle((VehicleHash)model, spawnPos, new Vector3(0, 0, heading), color1, color2, dimension);
-                // You can also add more things, like vehicle modifications, number plate, etc.	
-                API.setEntityData(respawnCar, "RESPAWNABLE", true);
-                API.setEntityData(respawnCar, "SPAWN_POS", spawnPos);
-                API.setEntityData(respawnCar, "SPAWN_ROT", heading);
-                API.setEntityData(respawnCar, "SPAWN_DIM", dimension);
-
-            }
-            if (API.getEntityData(car, "BATTLE_CAR") == true && !GmBattleRoyal.IsGameRunning)
-            {
-                API.consoleOutput("False");
-
-                var color1 = API.getVehiclePrimaryColor(car);
-                var color2 = API.getVehicleSecondaryColor(car);
-                var model = API.getEntityModel(car);
-
-                var spawnPos = API.getEntityData(car, "SPAWN_POS");
-                var heading = API.getEntityData(car, "SPAWN_ROT");
-                var dimension = API.getEntityData(car, "SPAWN_DIM");
-
-                API.deleteEntity(car);
-
-                var respawnCar = API.createVehicle((VehicleHash)model, spawnPos, new Vector3(0, 0, heading), color1, color2, dimension);
-                // You can also add more things, like vehicle modifications, number plate, etc.	
-                API.setEntityData(respawnCar, "BATTLE_CAR", true);
-                API.setEntityData(respawnCar, "SPAWN_POS", spawnPos);
-                API.setEntityData(respawnCar, "SPAWN_ROT", heading);
-                API.setEntityData(respawnCar, "SPAWN_DIM", dimension);
-
-            }
-        }
+        }   
     }
 }

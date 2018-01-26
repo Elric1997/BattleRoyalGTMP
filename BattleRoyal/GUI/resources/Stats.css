@@ -1,9 +1,5 @@
-﻿#node1
-{
-	background-color: #DF013A;
-	margin: 0px;
-}
-#node2
-{
-	background-color: #585858;
+﻿#container {
+    margin: 20px;
+    width: 200px;
+    height: 200px;
 }

@@ -16,7 +16,6 @@ namespace BattleRoyal.Manager
 {
     public class SpawnManager : Script
     {
-        public int conection = -3;
 
         public SpawnManager()
         {
@@ -24,8 +23,6 @@ namespace BattleRoyal.Manager
         }
         private void OnPlayerFinishedDownloadHandler(Client Player)
         {
-            conection--;
-
             Vector3 RotationsPositon = new Vector3(0, 0, 90);
             Vector3 SpawnPos = new Vector3(-551.7838, 284.1952, 82.97662);
 

@@ -1,4 +1,6 @@
-﻿var selectingSkin = false;
+﻿/// <reference path="types-gt-mp/Declarations.d.ts" />
+
+var selectingSkin = false;
 var currentSkinIndex = 0;
 
 var skins = [

@@ -25,7 +25,8 @@ namespace BattleRoyal.Manager.Events
                         API.setEntityPosition(player, new Vector3(3257.377, -147.1828, 17.27221));
                         API.sendNotificationToPlayer(player, player.name + " you are now in the lobby area!");
                         API.sendNotificationToPlayer(player, "Please wait until the game starts!");
-                        API.setEntityDimension(player, -2);
+                        API.setEntityDimension(player, 0);
+                        DimensionManager.DismissPrivateDimension(player);
                     }
                     else
                     {
@@ -33,20 +34,25 @@ namespace BattleRoyal.Manager.Events
                         API.setEntityPosition(player, new Vector3(-1266.848, -3324.198, 13.94505));
                         API.sendNotificationToPlayer(player, "A Game is already running!");
                         API.sendNotificationToPlayer(player, player.name + " you are now in the freerome area!");
-                        API.setEntityDimension(player, -1);
+                        API.setEntityDimension(player, 0);
+                        DimensionManager.DismissPrivateDimension(player);
                     }
                     break;
                 case "JoinFreerome":
                     API.freezePlayer(player, false);
                     API.setEntityPosition(player, new Vector3(-1266.848, -3324.198, 13.94505));
                     API.sendChatMessageToPlayer(player, player.name + " you are now in the freerome area!");
-                    API.setEntityDimension(player, -1);
+                    API.setEntityDimension(player, 0);
+                    DimensionManager.DismissPrivateDimension(player);
                     break;
                 case "UpDateSkinDB":
                     UpdatePlayerDB updatePlayerDB = new UpdatePlayerDB();
                     int NewSkinID = Convert.ToInt32(arguments[0]);
                     updatePlayerDB.SkinID = NewSkinID;
                     updatePlayerDB.UpdateSkin(player);
+                    break;
+                case "pickup":
+                    API.triggerClientEventForAll("delpickup" , arguments[0]);
                     break;
             }
         }
